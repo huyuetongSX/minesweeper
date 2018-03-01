@@ -1,0 +1,94 @@
+body{
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	background: #f1f1f1;
+	font-size: 12px;
+}
+.bug{
+	width: 1px;
+	height: 1px;
+	background: #000;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.create-wrap{
+	padding: 10px;
+}
+.minesweeper-wrap{
+	position: absolute;
+	top: 50vh;
+	left: 50vw;
+	transform: translate(-50%,-50%);
+}
+.minesweeper{
+	border: 1px solid #000;
+	column-count: 10;
+	column-gap: 0;
+}
+.minesweeper-wrap .start-game{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9;
+	background: rgba(255,255,255,0.7);
+	display: none;
+}
+.minesweeper-wrap .play{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-family: arial;
+}
+.minesweeper span{
+	width: 20px;
+	height: 20px;
+	display: block;
+	position: relative;
+	background: #999;
+	border: 2px solid #ccc;
+	border-bottom-color: #666;
+	border-right-color: #666;
+	text-align: center;
+	line-height: 16px;
+	color: blue;
+	user-select: none;
+	cursor: pointer;
+}
+.minesweeper span.open{
+	background: #ccc;
+	border: 1px solid #666;
+	line-height: 18px;
+	cursor: default;
+}
+.minesweeper span.mark:before{
+	position: absolute;
+	border: solid transparent;
+	border-right: 8px solid red;
+	content: "";
+	display: block;
+	top: 5px;
+	right: calc(50% - 1px);
+	transform: translateY(-50%);
+	z-index: 1;
+}
+.minesweeper span.mark:after{
+	position: absolute;
+	width: 2px;
+	height: 10px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #000;
+	content: "";
+	display: block;
+}
+.judge:after{
+	content: "";
+	display: block;
+	clear: both;
+}

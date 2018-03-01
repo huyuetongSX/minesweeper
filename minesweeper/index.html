@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="UTF-8">
+		<title>扫雷</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.min.css"/>
+		<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/otherminesweeper.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="create-wrap" id="create-wrap">
+			<span>列:</span>
+			<span><input type="tel" id="column" value="" /></span>
+			<span>行:</span>
+			<span><input type="tel" id="row" value="" /></span>
+			<span>雷数:</span>
+			<span><input type="tel" id="minelength" value="" /></span>
+			<span><input type="button" id="create" value="立即生成" /></span>
+		</div>
+		<div class="minesweeper-wrap" id="minesweeper-wrap">
+			<div class='start-game' id="start-game">
+				<button class='play' id='play'>play</button>
+			</div>
+			<div class="judge">
+				<span style="float: left;">time:<span id="time"></span></span>
+				<span style="float: right;">剩余<span id="surplus"></span></span>
+			</div>
+		</div>
+	</body>
+</html>
